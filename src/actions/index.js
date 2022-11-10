@@ -1,1 +1,0 @@
-export {addName} from './action'
