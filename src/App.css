@@ -1,38 +1,69 @@
-.App {
+.App{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.addBox{
+  height: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.addBox_Box{
+  height: 60px;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  align-items: center;
+  justify-content: center;
+  border-radius:310px;
+  margin:  2% auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addBox input{
+  height: 50px;
+  width: 82%;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  border: none;
+  background: white;
+  font-size: 1.2rem;
+}
+.addBox_Box button{
+  height: 52px;
+  width: 90px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border: none;
+  background: white;
+  font-size: 1.2rem;
+  color: rgb(39, 29, 29);
+  font-weight: 650;
+}
+.addBoxElements{
+  height: 200px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.addBoxElement{
+  height: 80px;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e5e5e5eb;
+}
+.addBoxElement input{
+  height:25px;
+  width: 25px;
+}
+.addBoxElement button{
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: none;
+  background: #e5e5e5eb;
 }
