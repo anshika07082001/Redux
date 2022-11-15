@@ -1,2 +1,5 @@
 export const ADD_ELEMENT = 'ADD_ELEMENT'
 export const DELETE_CONTENT='DELETE_CONTENT'
+export const USER_SUCCESS = 'USER_SUCCESS'
+export const USER_FAILURE = 'USER_FAILURE'
+export const TODO_STARTED = 'TODO_STARTED'

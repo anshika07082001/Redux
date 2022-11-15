@@ -5,7 +5,7 @@ import Todo from './Components/Todo';
 
 function App() {
   return (
-    <Provider store={store}>
+    <Provider store={store}> 
     <div className="App">
       <Todo/>
     </div>
