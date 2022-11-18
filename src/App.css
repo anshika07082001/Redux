@@ -1,38 +1,61 @@
-.App {
+.App{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.productDiv{
+  margin: auto;
+  width: 40%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.formDiv{
+  height: 200px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+}
+.formDiv label{
+  margin: 2% 0%;
+}
+.formDiv input{
+  height: 15%;
+  width: 98%;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+.formDiv button{
+  height: 40px;
+  width: 20%;
+  border: none;
+  background-color: rgb(50, 184, 184);
+  border-radius: 5px;
+  margin-top: 2%;
+}
+#delBtn{
+  height: 40px;
+  width: 20%;
+  border: none;
+  background-color: rgba(201, 24, 83, 0.918);
+  border-radius: 5px;
+  margin: 2% 0%;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.tableDiv{
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tableDiv table{
+  width: 100%;
+}
+.tableDiv button{
+  height: 30px;
+  width: 70px;
+  border: 1px solid cornflowerblue;
+  border-radius: 5px;
+  background-color: white;
+}
+.tableDiv input{
+  width: 30px;
+  text-align: center;
 }
