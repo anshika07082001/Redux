@@ -47,6 +47,7 @@
 }
 .tableDiv table{
   width: 100%;
+  margin: 15% auto;
 }
 .tableDiv button{
   height: 30px;
@@ -58,4 +59,18 @@
 .tableDiv input{
   width: 30px;
   text-align: center;
+}
+.success{
+  height: 20px;
+  width: 100%;
+  background-color: #88ed88;
+  color: rgb(28, 78, 49);
+  border-radius: 5px;
+}
+.error{
+  height: 20px;
+  width: 100%;
+  background-color: #f37474d0;
+  color: rgb(114, 19, 19);
+  border-radius: 5px;
 }
