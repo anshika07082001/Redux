@@ -71,6 +71,9 @@ const AddProduct = () => {
     {state.error=='Fetched successfuly'?
     <div className='success'>{state.error}</div>:
     <p></p>}
+    {state.error=='pending'?
+    <img src='https://assets-blog.lottiefiles.dev/2021/03/CoMw0bhvYXrDGN6ZDTOWmFAfoIWWR8VxEIAzq9r8.gif' alt=''/>:
+    <p></p>}
     <hr/>
     <h2>Update Product</h2>
     <hr/>

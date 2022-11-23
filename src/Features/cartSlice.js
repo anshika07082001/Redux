@@ -44,7 +44,7 @@ const cartSlice=createSlice({
     },
     extraReducers:{
         [fetchCartData.pending]:(state,action)=>{
-            state.error=''
+            state.error='pending'
         },
         [fetchCartData.fulfilled]:(state,action)=>{
             state.arr=action.payload
