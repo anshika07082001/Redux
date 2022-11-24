@@ -87,6 +87,4 @@ const cartSlice=createSlice({
     }
 })
 
-export const { productAdded,productUpdated }=cartSlice.actions
-
 export default cartSlice.reducer
