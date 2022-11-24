@@ -1,0 +1,43 @@
+.profileNav{
+    height: 60px;
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    flex-direction: row;
+    margin-top: -27px;
+}
+.navInp{
+    height: 30px;
+    width: 20%;
+    background-color: #121212;
+    border: 1px ridge grey;
+    border-radius: 6px;
+    margin: 12px 30px;
+}
+.navDiv{
+    height: 20px;
+    width: 30%;
+    text-align: end;
+}
+.navDiv i{
+    margin: 20px 7px;
+}
+
+.profileBody{
+    height: auto;
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+.profileBodyDiv{
+    height: 35px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    margin-top: 2%;
+}
+.profileBodyDiv a{
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}

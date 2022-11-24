@@ -1,0 +1,63 @@
+#searchInp{
+  height: 60px;
+  width: 50%;
+  margin: 2%;
+  border-radius: 10px;
+  border: none;
+  background: rgb(172, 47, 47);
+  color: white;
+  font-size: 1.2rem;
+}
+#searchInp::placeholder {
+  color: white;
+}
+
+.profileDiv{
+  height: 250px;
+  width: 60%;
+  background-color: rgb(172, 47, 47);
+  border: 1px ridge grey;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  margin: 5% auto;
+}
+.profileDiv img{
+  height: 65%;
+  width: 20%;
+  border-radius: 100px;
+  margin: auto;
+  border: 4px solid rgb(27, 27, 27);
+}
+.profileContentDiv{
+  height: 90%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 2%;
+}
+.profileContentDiv h1{
+    margin: 30px 0px 0px 7px;
+}
+.profileContentDiv h4{
+    margin: 30px 0px 0px 7px;
+}
+.btnDiv{
+    margin-top: 20px;
+}
+.btnDiv button,.profileContentDiv button{
+    margin: 7px;
+    padding: 2px;
+    background: rgb(34, 32, 32);
+    color: rgb(233, 231, 231);
+    border: none;
+    height: 25px;
+}
+.spanDiv{
+    margin-top: 50px;
+}
+.profileContentDiv span{
+    margin: 7px;
+}
