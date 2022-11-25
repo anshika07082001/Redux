@@ -1,9 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import GitSearch from './features/GitSearch';
-import Profile from './features/Profile';
+import Profile from './Components/Profile'
 
 function App() {
+  
   return (
     <div className="App">
     <Routes>
