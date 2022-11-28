@@ -13,9 +13,7 @@ const GitSearch = () => {
   var searchInp=useRef('')
 
   useEffect(()=>{
-    if(searchInp.current){
-      searchInp.current.focus()
-    }
+    searchInp.current.focus()
     dispatch(usersData())
   },[])
 
