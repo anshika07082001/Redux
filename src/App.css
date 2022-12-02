@@ -1,7 +1,8 @@
-.App{
+.App {
   text-align: center;
-}
-.addBox{
+} 
+
+.addBox {
   height: auto;
   width: 100%;
   display: flex;
@@ -9,7 +10,8 @@
   align-items: center;
   justify-content: center;
 }
-.addBox_Box{
+
+.addBox_Box {
   height: 60px;
   width: 40%;
   display: flex;
@@ -20,7 +22,8 @@
   border-radius:310px;
   margin:  2% auto;
 }
-.addBox input{
+
+.addBox input {
   height: 50px;
   width: 82%;
   border-bottom-left-radius: 30px;
@@ -29,7 +32,8 @@
   background: white;
   font-size: 1.2rem;
 }
-.addBox_Box button{
+
+.addBox_Box button {
   height: 52px;
   width: 90px;
   border-bottom-right-radius: 30px;
@@ -40,7 +44,8 @@
   color: rgb(39, 29, 29);
   font-weight: 650;
 }
-.addBoxElements{
+
+.addBoxElements {
   height: 200px;
   width: 60%;
   display: flex;
@@ -48,23 +53,26 @@
   align-items: center;
   margin: auto;
 }
-.addBoxElement{
-  height: 80px;
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+
+.addBoxElement {
   align-items: center;
   border-bottom: 2px solid #e5e5e5eb;
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  justify-content: space-between;
+  width: 80%;
 }
-.addBoxElement input{
+
+.addBoxElement input {
   height:25px;
   width: 25px;
 }
+
 .addBoxElement button{
+  border: none;
+  border-radius: 5px;
+  color: white;
   height: 30px;
   width: 35px;
-  border-radius: 5px;
-  border: none;
-  color: white;
 }

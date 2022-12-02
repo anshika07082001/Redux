@@ -1,24 +1,30 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { add, del, edit,check } from '../features/todoSlice'
+import { add, del, edit,check,flg } from '../features/todoSlice'
 
 const Todo = () => {
     
-    var contentInp=useRef(''),ind=''
+    var contentInp=useRef(''),ind
     const state = useSelector(state=>state.todoSlice)
     const dispatch = useDispatch()
+    var [txt,setTxt]=useState('Add')
 
     // Add function
-    const addBtn=()=>{
-        var txt = document.getElementById('submit').innerHTML
+    const addBtn=(e)=>{
+        var txt = e.target.innerHTML
+        if(contentInp.current.value!==''){
         if(txt==='Add'){
         dispatch(add({value:false,content:contentInp.current.value}))
         }
         else{
-            dispatch(edit({index:ind,content:contentInp.current.value}))
-            document.getElementById('submit').innerHTML='Add'
+            dispatch(edit({index:state.index,content:contentInp.current.value}))
+            setTxt('Add')
         }
         contentInp.current.value=''
+    }
+    else{
+        alert('Fill details')
+    }
     }
     // delete function
     const deleteBtn=(e)=>{
@@ -29,7 +35,8 @@ const Todo = () => {
     const editBtn=(e)=>{
         ind =e.target.getAttribute('index')
         contentInp.current.value=state.arr[ind].content
-        document.getElementById('submit').innerHTML='Update'
+        setTxt('Update')
+        dispatch(flg(ind))
     }
     // check function
     const checkFun=(e)=>{
@@ -39,15 +46,15 @@ const Todo = () => {
     return (
     <div>
         <h1>Todo App</h1>
-        <div className='addBox'>
-            <div className='addBox_Box'>
+        <div className=' addBox '>
+            <div className=' addBox_Box '>
                 <input placeholder='Add Todo...' ref={contentInp}/>
-                <button onClick={addBtn} id='submit'>Add</button>
+                <button onClick={addBtn} id=' submit '>{txt}</button>
             </div>
         </div>
-        <div className='addBoxElements'>
+        <div className=' addBoxElements '>
             {state.arr.map((item,i)=> 
-            <div className='addBoxElement'>
+            <div className=' addBoxElement '>
                 <input type='checkbox' onChange={checkFun} index={i} checked={item.value}/>
                 <label>{item.content}</label>
                 <div>
@@ -56,7 +63,7 @@ const Todo = () => {
                 </div>
             </div>
             )}
-            </div>
+        </div>
     </div>
     )
 }
