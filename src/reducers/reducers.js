@@ -4,7 +4,8 @@ import { BUY_CAKE, BUY_CHOCOLATES, BUY_ICECREAM } from "../type/type"
 const initialState={
     numberOfCakes:10,
     numberOfChocolates:30,
-    numberOfIceCreams:20
+    numberOfIceCreams:20,
+    limit:''
 }
 
 // reducer function for buyCake
@@ -14,11 +15,13 @@ export const cakeReducer=(state=initialState,action)=>{
         if(action.value<=state.numberOfCakes){
         return{
             ...state,
-            numberOfCakes:state.numberOfCakes-action.value
+            numberOfCakes:state.numberOfCakes-action.value,
+            limit:""
         }}
-        else{
-            alert('Cake limit exceeded')
-            return state
+        else return{
+            ...state,
+            limit:'limit exceeded'
+            
         }
         default: return state
     }
@@ -31,11 +34,12 @@ export const icecreamReducer=(state=initialState,action)=>{
             if(action.value<=state.numberOfIceCreams){
                 return{
                 ...state,
-                numberOfIceCreams:state.numberOfIceCreams-action.value
+                numberOfIceCreams:state.numberOfIceCreams-action.value,
+                limit:''
         }}
-        else{
-            alert('Icecream limit exceeded')
-            return state
+        else return{
+            ...state,
+            limit:'limit exceeded'
         }
         default:return state
     }
@@ -48,11 +52,12 @@ const chocolateReducer=(state=initialState,action)=>{
             if(action.value<=state.numberOfChocolates){
                 return{
                 ...state,
-                numberOfChocolates:state.numberOfChocolates-action.value
+                numberOfChocolates:state.numberOfChocolates-action.value,
+                limit:''
         }}
-        else{
-            alert('Chocolate limit exceeded')
-            return state
+        else return{
+            ...state,
+            limit:'limit exceeded'
         }
         default:return state
     }

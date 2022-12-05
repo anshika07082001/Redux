@@ -8,75 +8,46 @@ const Form = () => {
     const dispatch = useDispatch()
 
     // function to  buyCake    
-    const cakeHandler=()=> {
-        if(cakeQuantInp.current.value!==''){
-            if(cakeQuantInp.current.value>0){
+    const orderBtnHandler=()=> {
+        if(cakeQuantInp.current.value!=='' || icecreamQuantInp.current.value!=='' || chocolateQuantInp.current.value!==''){
+            if(cakeQuantInp.current.value>0 ){
                 dispatch(buyCake(cakeQuantInp.current.value))
             }
-            else{
-                alert('enter the value greater than 0')
-            }
-        }
-        else{
-            alert('Fill details')
-        }
-    }
-
-    // function to buyIcecream
-    const icecreamHandler=()=>{
-        if(icecreamQuantInp.current.value!==''){
             if(icecreamQuantInp.current.value>0){
                 dispatch(buyIcecream(icecreamQuantInp.current.value))
             }
-            else{
-                alert('enter the value greater than 0')
-            } 
+            if(chocolateQuantInp.current.value>0){
+                dispatch(buyChocolate(chocolateQuantInp.current.value))
+            }
         }
         else{
             alert('Fill details')
         }
     }
 
-    // Function to buychocolate
-    const chocolateHandler=()=>{
-        if(chocolateQuantInp.current.value!==''){
-            if(chocolateQuantInp.current.value>0){
-                dispatch(buyChocolate(chocolateQuantInp.current.value))
-            }
-            else{
-                alert('enter the value greater than 0')
-            } 
-        }
-        else{
-            alert('Fill details')
-        }
-    }
     console.log(state)
   return (
     <div>
         <div>
-            <h4>To Buy Cake</h4>
-            <label>Number of Cakes={state.cake.numberOfCakes}</label><br/><br/>
-            <label>Enter Quantity: </label>
+            <h3>Number of Cakes={state.cake.numberOfCakes}</h3><br/><br/>
+            <label>Enter Quantity For Cake: </label>
             <input placeholder='Enter Quantity...' ref={cakeQuantInp} type='number'/>
-            <br/><br/>
-            <button onClick={cakeHandler}>Buy</button>
+            <br/>
+            <span>{state.cake.limit}</span><br/>
         </div>
         <div>
-        <h4>To Buy Icecream</h4>
-        <label>Number of Cakes={state.icecream.numberOfIceCreams}</label><br/><br/>
+        <h3>Number of Cakes={state.icecream.numberOfIceCreams}</h3><br/><br/>
 
-            <label>Enter Quantity: </label>
+            <label>Enter Quantity For Icecream: </label>
             <input placeholder='Enter Quantity...' ref={icecreamQuantInp} type='number'/>
-            <br/><br/>
-            <button onClick={icecreamHandler}>Buy</button>
+            <br/><span>{state.icecream.limit}</span><br/>
         </div>
         <div>
-            <h5>To Buy Chocolate</h5>
-            <label>Number of Cakes={state.chocolate.numberOfChocolates}</label><br/><br/>
-            <label>Enter Quantity: </label>
-            <input placeholder='Enter Quantity...' ref={chocolateQuantInp} type='number'/><br/><br/>
-            <button onClick={chocolateHandler}>Buy</button>
+            <h3>Number of Cakes={state.chocolate.numberOfChocolates}</h3><br/><br/>
+            <label>Enter Quantity of Chocolate: </label>
+            <input placeholder='Enter Quantity...' ref={chocolateQuantInp} type='number'/>
+            <br/><span>{state.chocolate.limit}</span><br/>
+            <button onClick={orderBtnHandler}>Place Order</button>
         </div> 
     </div>
   )
